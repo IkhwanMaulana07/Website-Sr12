@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo img {
+  max-width: 120px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.button-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-list li {
+  margin: 10px 0;
+}
+
+.button-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-list a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button-list a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+footer a {
+  text-decoration: none;
+  color: #e91e63;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #af4261;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: rotate(360deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .button-list a {
+    font-size: 14px;
+  }
+
+  .social-icons img {
+    width: 25px;
+    margin: 0 5px;
+  }
+}
