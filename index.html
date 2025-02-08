@@ -13,50 +13,41 @@
         margin: 0;
         padding: 0;
         color: #333;
-        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
       }
 
-      /* Adding aesthetic abstract shapes */
-      body::before {
-        content: "";
-        position: absolute;
-        top: -50px;
-        left: -50px;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(circle, #ffffff40, #f3ec78);
-        border-radius: 50%;
-        z-index: 0;
-      }
-
-      body::after {
-        content: "";
-        position: absolute;
-        bottom: -50px;
-        right: -50px;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle, #ffffff40, #f3ec78);
-        border-radius: 50%;
-        z-index: 0;
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
 
       .container {
-        max-width: 400px;
-        margin: 50px auto;
+        width: 90%;
+        max-width: 450px;
         background-color: white;
         border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        padding: 25px;
         text-align: center;
         position: relative;
-        z-index: 1;
+        overflow: hidden;
+        animation: fade-in 1s ease-out; /* Apply fade-in animation */
       }
 
       .logo img {
         max-width: 120px;
         margin-bottom: 20px;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in-out;
+        animation: fade-in 1s ease-out 0.3s; /* Delayed fade-in animation */
       }
 
       .logo img:hover {
@@ -67,13 +58,13 @@
         font-size: 26px;
         font-weight: bold;
         color: #a52a2a;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
 
       p {
         font-size: 14px;
         color: #555;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
 
       .button-list {
@@ -96,14 +87,13 @@
         text-decoration: none;
         border-radius: 10px;
         font-weight: bold;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        text-align: center;
+        transition: all 0.3s ease;
         position: relative;
       }
 
       .button-list a:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       }
 
       .button-list a img {
@@ -114,60 +104,38 @@
         left: 15px;
       }
 
-      footer {
-        margin-top: 30px;
-        font-size: 14px;
-        color: #777;
-      }
-
-      footer a {
-        text-decoration: none;
-        color: #a52a2a;
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-
-      footer a:hover {
-        color: #af4261;
-      }
-
-      /* Social Icons */
       .social-icons {
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-icons a {
+        margin: 0 10px;
       }
 
       .social-icons img {
-        width: 30px;
-        margin: 0 10px;
-        transition: transform 0.3s ease;
+        width: 35px;
+        transition: transform 0.3s ease-in-out;
       }
 
       .social-icons img:hover {
-        transform: rotate(360deg);
+        transform: rotate(360deg) scale(1.1);
       }
 
-      /* Responsive Design */
       @media (max-width: 768px) {
         .container {
-          width: 90%;
-          padding: 10px;
-        }
-
-        .logo img {
-          max-width: 100px;
-        }
-
-        h1 {
-          font-size: 22px;
+          max-width: 95%;
+          padding: 15px;
         }
 
         .button-list a {
           font-size: 14px;
+          padding: 12px;
         }
 
         .social-icons img {
-          width: 25px;
-          margin: 0 5px;
+          width: 28px;
         }
       }
     </style>
@@ -182,55 +150,38 @@
 
       <ul class="button-list">
         <li>
-          <a href="https://id.shp.ee/d8FLrtL" target="_blank">
-            <img src="shopee-logo.png" alt="" />Shopee - Free Ongkir
-          </a>
-        </li>
-
-        <li>
-          <a href="https://tokopedia.link/VRCaJ661JMb">
-            <img src="tokopedia.png" alt="" />Tokopedia - Free Ongkir
+          <a href="https://s.shopee.co.id/BEnC3ECkj?share_channel_code=1" target="_blank">
+            <img src="shopee-logo.png" alt="Shopee" />Shopee - Free Ongkir
           </a>
         </li>
         <li>
-          <a href="https://s.lazada.co.id/s.lKD1u">
-            <img src="lazada-logo.png" alt="" />Lazada SR12
+          <a href="https://tokopedia.link/VRCaJ661JMb" target="_blank">
+            <img src="tokopedia.png" alt="Tokopedia" />Tokopedia - Free Ongkir
           </a>
         </li>
         <li>
-          <a href="https://wa.me/6285782235116"
-            ><img src="kemitraan.png" alt="" />Kemitraan SR12</a
-          >
+          <a href="https://s.lazada.co.id/s.CYZRZ" target="_blank">
+            <img src="lazada-logo.png" alt="Lazada" />Lazada SR12
+          </a>
         </li>
         <li>
-          <a href="https://wa.me/qr/SR3VDLRN4T43J1"
-            ><img src="Whatsapp.png" alt="" />Konsultasi Produk SR12</a
-          >
+          <a href="https://wa.me/6285782235116" target="_blank">
+            <img src="Whatsapp.png" alt="Whatsapp" />Konsultasi Produk SR12
+          </a>
         </li>
         <li>
-          <a
-            href="https://www.instagram.com/sr12herbal2024?igsh=MWdoMjdoNWgyYWFoaQ=="
-          >
-            <img src="instagram.png" alt="" />Instagram SR12</a
-          >
+          <a href="https://www.instagram.com/sr12_skincareherbals_?utm_source=qr&igsh=MnU4cmZrMHJsZGpt" target="_blank">
+            <img src="instagram.png" alt="Instagram" />Instagram SR12
+          </a>
         </li>
       </ul>
 
       <div class="social-icons">
-        <a
-          href="https://www.instagram.com/sr12herbal2024?igsh=MWdoMjdoNWgyYWFoaQ=="
-          target="_blank"
-        >
+        <a href="https://www.instagram.com/sr12_skincareherbals_?utm_source=qr&igsh=MnU4cmZrMHJsZGpt" target="_blank">
           <img src="ig.png" alt="Instagram" />
         </a>
-        <a
-          href="https://www.tiktok.com/@sr12_skincareherbals?_t=8pXWulr7fbr&_r=1"
-          target="_blank"
-        >
+        <a href="https://www.tiktok.com/@sr12_skincareherbals" target="_blank">
           <img src="tt.png" alt="TikTok" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="yt.png" alt="YouTube" />
         </a>
       </div>
     </div>
